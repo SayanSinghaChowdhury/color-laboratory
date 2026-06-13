@@ -1,0 +1,177 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #f5f5f5;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 40px 20px;
+}
+
+/* Container */
+
+.font-color {
+	background: linear-gradient(
+		90deg,
+		#ff4d4d,
+		#ff9f1c,
+		#ffd60a,
+		#2ec4b6,
+		#3a86ff,
+		#8338ec
+	);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.container {
+	width: 100%;
+	max-width: 1100px;
+}
+
+/* Header */
+
+.header {
+	text-align: center;
+	margin-bottom: 30px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 15px;
+	color: #222;
+}
+
+.title span {
+	color: #8b5cf6;
+}
+
+.logo {
+	width: 30px;
+	height: 30px;
+
+	object-fit: contain;
+}
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
+}
+
+/* Buttons */
+
+.format-buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 35px;
+}
+
+.format-btn {
+	width: 100px;
+	height: 45px;
+	border: none;
+	background: white;
+	cursor: pointer;
+	font-size: 1rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	transition: 0.3s;
+}
+
+.format-btn:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+.format-btn:last-child {
+	border-radius: 0 10px 10px 0;
+}
+
+.format-btn:hover {
+	background: #ececec;
+}
+
+.active {
+	background: linear-gradient(
+		90deg,
+		#ff4d4d,
+		#ff9f1c,
+		#ffd60a,
+		#2ec4b6,
+		#3a86ff,
+		#8338ec
+	);
+	color: white;
+}
+
+/* Palette Section */
+
+.palette-container {
+	background: #f0ebeb;
+	border-radius: 20px;
+	padding: 35px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+
+/* Card */
+
+.color-card {
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+	transition: 0.3s;
+}
+
+.color-card:hover {
+	transform: translateY(-4px);
+}
+
+.color-preview {
+	height: 170px;
+	background: #32a852;
+}
+
+.color-value {
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+	.palette-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.title {
+		font-size: 2.3rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.palette-container {
+		grid-template-columns: 1fr;
+	}
+
+	.format-btn {
+		width: 90px;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+}
